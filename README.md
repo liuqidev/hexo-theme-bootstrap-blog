@@ -30,7 +30,7 @@ $ npm install hexo-tag-bootstrap --save
 $ npm install hexo-tag-fontawesome --save
 ```
 
-4. (option) Math support：
+4. (option) Mathjax support：
 
 Go to your hexo blog root, cd to `node_modules\kramed\lib\rules\inline.js `, edit line11:
 
