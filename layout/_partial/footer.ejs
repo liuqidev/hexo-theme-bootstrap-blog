@@ -1,8 +1,53 @@
-<footer class="blog-footer">
+
+<footer class="blog-footer">  
   <div class="container">
-    <div id="footer-info" class="inner">
-      &copy; <%= date(new Date(), 'YYYY') %> <%= config.author || config.title %><br>
-      Powered by <a href="http://hexo.io/" target="_blank">Hexo</a>
-    </div>
+		<div >
+	 <ul id="links" class="nav navbar-nav" style="display: inline-block;float: none;">
+		<li><a href="https://weibo.com/liuqidev" title="Find me on Weibo" target="_blank"><i class="iconfont">&#xe655;</i></a></li>
+		<li><a href="https://www.zhihu.com/people/wizardlq/" title="Find me on Zhihu" target="_blank"><i class="iconfont">&#xe61b;</i></a></li>
+		<li><a href="https://blog.csdn.net/icurious" title="Find me on CSDN" target="_blank"><i class="iconfont">&#xe64f;</i></a></li>
+		<li><a href="https://www.douban.com/people/icurious/" title="My Douban" target="_blank"><i class="iconfont">&#xe601;</i></a></li>
+		<li><a href="https://space.bilibili.com/20204877/#/" title="Find me on Bilibili" target="_blank"><i class="iconfont">&#xe6e1;</i></a></li>
+		<li><a href="https://github.com/liuqidev" title="My Linkedin" target="_blank"><i class="fab fa-linkedin-square"></i></a></li>
+		<li><a href="https://github.com/liuqidev" title="My Projects on Github" target="_blank"><i class="fab fa-github"></i></a></li>
+		<li><a href="https://stackoverflow.com/users/9121113/qi-liu" title="My StackoverFlow" target="_blank"><i class="fab fa-stack-overflow"></i></a></li>
+		
+		<% if (theme.rss){ %>
+		  <li><a href="<%- theme.rss %>" title="RSS Feed"><i class="fa fa-rss" target="_blank"></i></a></li>
+		<% } %>
+	  </ul>
+	 </div>
+    <div id="footer-info" class="text-center">
+        &copy; <%= date(new Date(), 'YYYY') %>. <em>All Rights Reserved by <a href="https://github.com/liuqidev" target="_blank"><%= config.author || config.title %></a></em><br>	
+	</div>
+	<div > 
+
+	  </links>
   </div>
+
+  <p>
+  	<span id="busuanzi_container_site_uv">
+  	    <span id="busuanzi_value_site_uv"></span> visitors  |  
+  	</span>
+
+      <span id="busuanzi_container_site_pv">
+         <span id="busuanzi_value_site_pv"></span> visits
+      </span>
+	  
+  </p>
+  
+
+  
+  <script async src="//dn-lbstatics.qbox.me/busuanzi/2.3/busuanzi.pure.mini.js">
+  <script type="text/javascript" id="clustrmaps" src="//cdn.clustrmaps.com/map_v2.js?d=XzXyQ1GOPdnOuiMHQmBZKolTWTBtRkFzmBoniAwXpMc&cl=ffffff&w=a"></script>
+  <!--mini map-->
+  <div id="minimap">
+  <!--<script type="text/javascript" src="//ra.revolvermaps.com/0/0/8.js?i=0107o8m66de&amp;m=7&amp;c=eeeeee&amp;cr1=fff600&amp;f=arial&amp;l=0&amp;v0=30&amp;z=13&amp;rx=30&amp;lx=380&amp;ly=200&amp;hc=0a65c2&amp;rs=40" async="async"></script>-->
+  <script type="text/javascript" src="//ra.revolvermaps.com/0/0/7.js?i=04xsrcfj1ee&amp;m=0c&amp;c=c7bdbd&amp;cr1=fff600&amp;lo=25&amp;oo=15&amp;sx=44&amp;ds=30&amp;cw=f9f9f9&amp;cb=000000" async="async"></script>  </div>
+  
+
+  
+  <%- partial('_partial/plugins/search-in-site') %>
+
 </footer>
+

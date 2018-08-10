@@ -15,7 +15,7 @@ Based on the [official Bootstrap Blog example template](http://getbootstrap.com/
 1) Install theme:
 
 ```bash
-$ git clone https://github.com/cgmartin/hexo-theme-bootstrap-blog.git themes/bootstrap-blog
+$ git clone https://github.com/liuqidev/hexo-theme-bootstrap-blog.git themes/bootstrap-blog
 ```
 
 2) (optional) Install [hexo-tag-bootstrap](https://github.com/wzpan/hexo-tag-bootstrap) for more Bootstrap tags (textcolors, buttons, labels, badges, etc.):

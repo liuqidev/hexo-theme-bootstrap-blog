@@ -3,33 +3,104 @@ navbar_brand: false
 menu:
   Home: index.html
   Archives: archives/
+  Categories: categories/
+  # Projects: projects/
+  About: about/
+  # Blogroll: blogroll/
+ 
 rss: /atom.xml
 
 # Content
-excerpt_link: Read More
-fancybox: false
+excerpt_link: Read more...
+fancybox: true
+wordcount: true
+viewcount: true
+timecost: false
+language: zh-CN
 
 # Sidebar
 widgets:
+- translate
+- recent_posts
 - about         # See also: `about_content`
 - category
-- tag
-- tagcloud
 - archive
-- recent_posts
+- search
+
+#- tag
+#- tagcloud
 about_widget_content: >
-  <p>Etiam porta <em>sem malesuada magna</em> mollis euismod.
-  Cras mattis consectetur purus sit amet fermentum. Aenean
-  lacinia bibendum nulla sed consectetur.</p>
+  <a target="_blank" href="about">
+  <img  id="avatar-logo" width=100%  alt="WizardLQ" src="http://www.gravatar.com/avatar/d14c7c7faf5e1f3001c070f3141d698f?s=512">
+  </a>
+  <p>Hi,我是一名魔法师，目前自动化硕士在读.<em><strong>“科技是普通人眼中的魔法”</strong></em>.之前有在<a href="https://blog.csdn.net/icurious">CSDN</a>、博客园、简书等写过博客.
+  写博客一方面能够帮助自己查缺补漏，总结和反思，同时还能被他人看到和甚至对他人产生帮助，十分有意义.若有读者在阅读中发现问题或者有什么意见或者建议，欢迎联系我的邮箱，
+  或者在博客或者博文中留言，我会尽量回复.<em>(由于平时比较忙<s>我比较懒</s>，有些文章可能需要很长时间才能完善.)</em><br/><strong>你通过下列方式联系到我：</strong></br>
+  <i class="iconfont">&#xe66e;</i><em>Email: <a>liuqidev#gmail.com</a></em>|
+  <i class="iconfont">&#xe64f;</i><a href="https://blog.csdn.net/icurious">CSDN</a>|
+  <i class="iconfont">&#xe655;</i><a href=“https://weibo.com/liuqidev/”>Weibo</a>|
+  <i class="iconfont">&#xe6e1;</i><a href="https://space.bilibili.com/20204877/#/">BiliBili</a>
+  </p>
 
 # widget behavior
 archive_type: 'monthly'
-show_count: true
 
 # Miscellaneous
-google_analytics:
-favicon:
+google_analytics: UA-122713769-1
+favicon: images/icon.png
 twitter_id:
-google_plus:
+google_plus: 112373242775367333102
 fb_admins:
 fb_app_id:
+# baidu analytics
+baidu_tongji: true
+
+# https://github.com/hustcc/canvas-nest.js
+canvas_nest: false
+
+# https://github.com/imsun/gitment
+# https://coding.net/  can be deployed to coding
+# gitment: false
+gitment:
+  owner: liuqidev
+  repo: liuqidev.github.io
+  client_id: 9db4a7f39961fa7531cc
+  client_secret: bd23ffc25530e831d3dc6efc731bb9de4d8c6fd0
+  local_id: 60bcecf77b594c435fc5
+  local_secret: b492c879473fdb14ca091697ffb0f03fab646c7f
+  coding_owner: liuqidev
+  coding_repo: liuqidev.coding.me
+  coding_id: 1dc5be42b7acd0c2612856da6d5d4817   
+  coding_secret: f908fdf66dbca953af36bf49775bb73a89aff4d6
+ 
+# Valine Comment system. https://valine.js.org
+valine: false
+# valine:
+  # enable: true # 如果你想使用valine，请将值设置为 true
+  # appId: kBrTfD8l4RFzueSAt65hASek-gzGzoHsz # your leancloud appId
+  # appKey: AFsAfwfHqW6iEHkAc3TjYEzh # your leancloud appKey
+  # notify: false # Mail notify
+  # verify: false # Verify code
+  # avatar: mm # Gravatar style : mm/identicon/monsterid/wavatar/retro/hide
+  # placeholder: Say something~ # Comment Box placeholder
+  # guest_info: nick,mail # Comment header info
+  # pageSize: 20 # comment list page size
+
+# livere https://livere.com/
+livere: false
+# livere:
+  # dataUID: MTAyMC8zODU5MS8xNTExOQ==
+ 
+# http://www.daovoice.io
+dao_voice: false
+# dao_voice:
+  # appId: a2c8df52
+  
+eyes_protected: false
+
+# dynamic_title
+# title_change: false
+title_change:
+  normal: o(∩_∩)o Welcome!
+  leave: Opps...●﹏●
+

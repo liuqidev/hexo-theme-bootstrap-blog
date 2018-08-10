@@ -48,7 +48,10 @@
 .article-share-twitter,
 .article-share-facebook,
 .article-share-pinterest,
-.article-share-google {
+.article-share-google,
+.article-share-qq,
+.article-share-weibo
+ {
   width: 50px;
   height: 36px;
   display: block;
@@ -60,7 +63,9 @@
 .article-share-twitter:before,
 .article-share-facebook:before,
 .article-share-pinterest:before,
-.article-share-google:before {
+.article-share-google:before,
+.article-share-qq:before,
+.article-share-weibo:before {
   font-size: 20px;
   font-family: FontAwesome;
   width: 20px;
@@ -75,7 +80,9 @@
 .article-share-twitter:hover,
 .article-share-facebook:hover,
 .article-share-pinterest:hover,
-.article-share-google:hover {
+.article-share-google:hover,
+.article-share-qq:hover,
+.article-share-weibo:hover  {
   color: #fff;
 }
 .article-share-twitter:before {
@@ -106,3 +113,23 @@
   background: #dd4b39;
   text-shadow: 0 1px #be3221;
 }
+
+.article-share-qq:before {
+  /* content: "\f1d6"; */
+  content: "\f1d6";
+}
+.article-share-qq:hover {
+  background: #0188FB;
+  text-shadow: 0 1px #be3221;
+}
+
+.article-share-weibo:before {
+  /* content: "\f18a"; */
+  content: "\f18a";
+}
+.article-share-weibo:hover {
+  background: #F7671D;
+  text-shadow: 0 1px #be3221;
+}
+
+

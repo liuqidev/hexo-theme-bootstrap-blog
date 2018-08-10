@@ -1,1 +1,25 @@
-<%- partial('_partial/article', {post: page, index: false}) %>
+<% if (page.layout==='categories'){ %>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-7">
+			<h2>Categories</h3>
+			<hr>
+			<h4>
+			<%- list_categories({show_count: theme.show_count, class: 'archive-article-title'}) %>
+			</h4>
+		</div>
+		<div class="col-sm-5">
+			<h2>TagCloud</h2>
+			<hr>
+			<h4>
+			    <p class="tagcloud">
+			  <%- tagcloud() %>
+			</p>
+			</h4>
+		</div>
+	</div>
+</div>
+<% } else{ %>
+	<h1>To be continue...</h1>
+
+<% } %>

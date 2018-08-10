@@ -1,0 +1,9 @@
+<script>
+	(function(){
+			if (prompt('This is a private essay, please enter the password:') !== '<%= pass %>'){
+				alert('Wrong password! ');
+			
+				history.back();
+			}
+	})();
+</script>

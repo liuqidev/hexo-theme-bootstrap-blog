@@ -1,0 +1,20 @@
+<% if (theme.dao_voice){ %>
+<%- partial('plugins/dao-voice') %>
+<% } %>
+
+<% if (theme.baidu_tongji){ %>
+<%- partial('plugins/baidu-tongji') %>
+<% } %>
+
+
+<% if (theme.eyes_protected){ %>
+<%- partial('plugins/eyes-protected') %>
+<% } %>
+
+<% if (theme.canvas_nest){%>
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+<% } %>
+
+<% if (theme.title_change) { %>
+	<%- partial('plugins/dynamic-title') %>
+<% } %>

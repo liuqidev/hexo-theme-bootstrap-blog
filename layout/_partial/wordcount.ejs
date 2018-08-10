@@ -1,0 +1,15 @@
+<% if (!index && theme.wordcount){ %>
+      <div class="post-meta">
+            <span class="glyphicon glyphicon-pencil"></span>
+            <span class="post-meta-item-text">&nbsp;Total&nbsp;</span>
+            <span class="post-count"><%= wordcount(post.content) %>&nbsp;words</span>
+      </div>
+<% } %>
+
+<% if (!index && theme.timecost){ %>
+      <div class="post-meta">
+            <span class="glyphicon glyphicon-time"></span>
+            <span class="post-meta-item-text">&nbsp;Time&nbsp;</span>
+            <span class="post-count"><%= min2read(post.content) %>min</span>
+      </div>
+<% } %> 

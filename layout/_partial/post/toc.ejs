@@ -1,0 +1,10 @@
+<!-- Table of Contents -->
+<% if (!index && post.toc){ %>
+	<aside id="article-toc" role="navigation" class="fixed">
+		<div id="article-toc-inner">
+			<strong class="sidebar-title">
+			Contents</strong>
+			<%- toc(post.content, {list_number: false}) %>
+		</div>
+	</aside>
+<% } %>

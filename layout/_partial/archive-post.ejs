@@ -1,6 +1,15 @@
-<article class="archive-article archive-type-<%= post.layout %>">
-  <header class="archive-article-header">
-    <%- partial('post/title', {class_name: 'archive-article-title'}) %>
-    <%- partial('post/date', {class_name: 'archive-article-date', date_format: 'MMMM Do'}) %>
-  </header>
-</article>
+<!--<article class="archive-article archive-type-<%= post.layout %>"><header class="archive-article-header">-->
+			<tr>
+			<td style="vertical-align: middle;"><%- partial('post/date', {class_name: 'archive-article-date', date_format: 'MM-DD-dddd'}) %></td>
+<!--			<td><%- partial('post/title', {class_name: 'archive-article-title'}) %></td>-->
+			 <td>
+			 <h4 itemprop="name">
+			  <a class="'archive-article-title'" href="<%- url_for(post.path) %>"><%= post.title || '(no title)' %></a>
+			</h4>
+			  <%- list_tags(post.tags, {
+				show_count: false,
+				class: 'article-tag'
+			  }) %>
+			</td>
+		</tr>
+ <!-- </header></article>-->

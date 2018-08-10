@@ -1,0 +1,11 @@
+<% if(!index){ %>
+	<% if(!post.no_comment){ %>
+		<% if (config.deploy.repo.coding) {%>
+			<%- partial('plugins/livere') %>
+		<% } else {%>
+			<%- partial('plugins/gitment') %>	
+			<%- partial('plugins/valine') %>
+		<% } %>
+	<% } %>
+<%} %>
+
