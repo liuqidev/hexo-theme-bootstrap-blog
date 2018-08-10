@@ -1,12 +1,12 @@
 # hexo-theme-bootstrap-blog
 
-A simple [Bootstrap] v3 blog theme for [Hexo].
+简单的基于bootstrap v3的hexo博客主题。
 
-Based on the [official Bootstrap Blog example template](http://getbootstrap.com/examples/blog/).
+源自 [官方主题](http://getbootstrap.com/examples/blog/).
 
-[Demo site](http://cgmartin.github.io/hexo-theme-bootstrap-blog/) | [More Information](https://cgmartin.com/2016/01/05/bootstrap-blog-hexo-theme/)
+[演示](http://i.blankspace.cn) | [更多信息](http://i.blankspace.cn/categories/Projects/hexo-theme-bootstrap-blog/) | [中文文档](https://github.com/liuqidev/hexo-theme-bootstrap-blog/blob/master/README-zhs.md)
 
-## Setup Instructions
+## 安装
 
 ### Install
 
@@ -15,7 +15,7 @@ Based on the [official Bootstrap Blog example template](http://getbootstrap.com/
 1) Install theme:
 
 ```bash
-$ git clone https://github.com/cgmartin/hexo-theme-bootstrap-blog.git themes/bootstrap-blog
+$ git clone https://github.com/liuqidev/hexo-theme-bootstrap-blog.git themes/bootstrap-blog
 ```
 
 2) (optional) Install [hexo-tag-bootstrap](https://github.com/wzpan/hexo-tag-bootstrap) for more Bootstrap tags (textcolors, buttons, labels, badges, etc.):
@@ -30,6 +30,31 @@ $ npm install hexo-tag-bootstrap --save
 $ npm install hexo-tag-fontawesome --save
 ```
 
+4. (option) Math support：
+
+Go to your hexo blog root, cd to `node_modules\kramed\lib\rules\inline.js `, edit line11:
+
+```bash
+//  escape: /^\\([\\`*{}\[\]()#$+\-.!_>])/,
+  escape: /^\\([`*\[\]()#$+\-.!_>])/
+```
+
+and then, edit line 20/21:
+
+```bash
+//  em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
+  em: /^\*((?:\*\*|[\s\S])+?)\*(?!\*)/
+```
+finally, add below into hexo 
+
+```
+# MathJax Support
+mathjax:
+  enable: true
+```
+
+
+
 ### Enable
 
 Modify the `theme` setting in `_config.yml` to `bootstrap-blog`.
@@ -41,40 +66,100 @@ cd themes/bootstrap-blog
 git pull
 ```
 
-## Configuration
+## 配置
 
 ```yml
 # File: themes/bootstrap-blog/_config.yml
-
 # Header
 navbar_brand: false
 menu:
   Home: index.html
   Archives: archives/
+  Categories: categories/
+  # Projects: projects/
+  About: about/
+  # Blogroll: blogroll/
+ 
 rss: /atom.xml
 
 # Content
-excerpt_link: Read More
+excerpt_link: Read more...
 fancybox: true
+wordcount: true
+viewcount: true
+timecost: false
+language: zh-CN
 
 # Sidebar
 widgets:
+- translate
+- recent_posts
 - about         # See also: `about_content`
 - category
-- tag
-- tagcloud
-- archives
-- recent_posts
+- archive
+- search
+#- tag
+#- tagcloud
 about_widget_content: >
   <p>Etiam porta <em>sem malesuada magna</em> mollis euismod.
   Cras mattis consectetur purus sit amet fermentum. Aenean
   lacinia bibendum nulla sed consectetur.</p>
+# widget behavior
+archive_type: 'monthly'
 
 # Miscellaneous
-google_analytics:
-favicon:
-twitter:
-google_plus:
+google_analytics: UA-122713769-1
+favicon: images/icon.png
+twitter_id:
+google_plus: your google plus ID
+fb_admins:
+fb_app_id:
+# baidu analytics
+baidu_tongji: true
+
+# https://github.com/hustcc/canvas-nest.js
+canvas_nest: false
+
+# https://github.com/imsun/gitment
+# https://coding.net/  can be deployed to coding
+# gitment: false
+gitment:
+  owner: liuqidev
+  repo: liuqidev.github.io
+  client_id: 
+  client_secret: 
+ 
+# Valine Comment system. https://valine.js.org
+valine: false
+# valine:
+  # enable: true # Use valine，set true
+  # appId:  # your leancloud appId
+  # appKey:  # your leancloud appKey
+  # notify: false # Mail notify
+  # verify: false # Verify code
+  # avatar: mm # Gravatar style : mm/identicon/monsterid/wavatar/retro/hide
+  # placeholder: Say something~ # Comment Box placeholder
+  # guest_info: nick,mail # Comment header info
+  # pageSize: 20 # comment list page size
+
+# livere https://livere.com/
+livere: false
+# livere:
+  # dataUID: #your dataID
+ 
+# http://www.daovoice.io
+dao_voice: false
+# dao_voice:
+  # appId: a2c8df52
+  
+eyes_protected: false
+
+# dynamic_title
+# title_change: false
+title_change:
+  normal: o(∩_∩)o Welcome!
+  leave: Opps...●﹏●
+
 ```
 
 - **navbar_brand** - The HTML content for an optional ["navbar-brand"](http://getbootstrap.com/components/#navbar-brand-image). Can be text or an image. `false` to hide.
@@ -109,7 +194,24 @@ theme_config:
     "about" sidebar widget.</p>
 ```
 
-## Features
+## 新特性
+
+- toc: table of contents, show the toc of an article besides.
+- top: enable an article stick 
+- wordcount
+
+- viewcount
+- timecost
+- baidu_tongji
+- canvas_nest
+- comment systems:
+  - gitment: https://github.com/imsun/gitment
+  - valine: https://valine.js.org
+  - livere: https://livere.com/
+  - dao_voice: http://www.daovoice.io
+- dynamic_title
+
+## 原来特性
 
 ### Front-Matter Extras
 
@@ -199,9 +301,10 @@ The Landscape Stylus styles have been replaced with standard CSS files which ove
 
 [MIT License](http://cgm.mit-license.org/)
 
-Copyright © 2016 Christopher Martin
+Copyright © 2016 [@liuqidev](https://github.com/liuqidev)
 
 [Hexo]: http://zespia.tw/hexo/
 [Fancybox]: http://fancyapps.com/fancybox/
 [Font Awesome]: http://fontawesome.io/
 [Bootstrap]: http://getbootstrap.com/
+
