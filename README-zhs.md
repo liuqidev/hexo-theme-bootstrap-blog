@@ -239,9 +239,9 @@ Usage:
 A custom tag for the [Bootstrap "callout" style](http://cpratt.co/twitter-bootstrap-callout-css-styles/) is available for use.
 
 Usage:
-> {% callout [type:default|primary|success|info|warning|danger] %}
->...content...
-> {% endcallout %}
+> `{% callout [type:default|primary|success|info|warning|danger] %}`
+> `...content...`
+>  `{% endcallout %}`
 
 
 Example:
