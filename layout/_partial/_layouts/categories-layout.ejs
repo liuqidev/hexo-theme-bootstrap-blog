@@ -1,0 +1,23 @@
+<div class="bg bg-blur" style="background:url('/images/bg/bg-1.jpg');background-position:center"></div>
+<%- partial('_partial/masthead') %>
+<div class="container">
+	<div class="row">
+		<div class="col-sm-7">
+			<h2>Categories</h3>
+			<hr>
+			<%- list_categories({show_count: theme.show_count, class: 'sidebar-module'}) %>
+
+
+		</div>
+		<div class="col-sm-5">
+			<h2>TagCloud</h2>
+			<hr>
+			<h4>
+				<p class="tagcloud">
+			  <%- tagcloud() %>
+			</p>
+			</h4>
+		</div>
+	</div>
+</div>
+<%- partial('_partial/footer', null, {cache: !config.relative_link}) %>

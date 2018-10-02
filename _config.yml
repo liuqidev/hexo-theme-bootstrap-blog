@@ -6,7 +6,7 @@ menu:
   Categories: categories/
   # Projects: projects/
   About: about/
-  # Blogroll: blogroll/
+  Comments: comments/
  
 rss: /atom.xml
 
@@ -20,11 +20,13 @@ language: zh-CN
 
 # Sidebar
 widgets:
-- translate
-- recent_posts
 - about         # See also: `about_content`
+- recent_posts
+- calendar
+# - translate
 - category
 - archive
+
 - search
 
 #- tag
@@ -33,20 +35,16 @@ about_widget_content: >
   <a target="_blank" href="about">
   <img  id="avatar-logo" width=100%  alt="WizardLQ" src="http://www.gravatar.com/avatar/d14c7c7faf5e1f3001c070f3141d698f?s=512">
   </a>
-  <p>Hi,我是一名魔法师，目前自动化硕士在读.<em><strong>“科技是普通人眼中的魔法”</strong></em>.之前有在<a href="https://blog.csdn.net/icurious">CSDN</a>、博客园、简书等写过博客.
-  写博客一方面能够帮助自己查缺补漏，总结和反思，同时还能被他人看到和甚至对他人产生帮助，十分有意义.若有读者在阅读中发现问题或者有什么意见或者建议，欢迎联系我的邮箱，
-  或者在博客或者博文中留言，我会尽量回复.<em>(由于平时比较忙<s>我比较懒</s>，有些文章可能需要很长时间才能完善.)</em><br/><strong>你通过下列方式联系到我：</strong></br>
-  <i class="iconfont">&#xe66e;</i><em>Email: <a>liuqidev#gmail.com</a></em>|
-  <i class="iconfont">&#xe64f;</i><a href="https://blog.csdn.net/icurious">CSDN</a>|
-  <i class="iconfont">&#xe655;</i><a href=“https://weibo.com/liuqidev/”>Weibo</a>|
-  <i class="iconfont">&#xe6e1;</i><a href="https://space.bilibili.com/20204877/#/">BiliBili</a>
+  <p>Welcome to my magic blog, I am a 1st year master of Automation. <strong>"Science and technology is the magic of mortal"</strong>. 
+  To know more about me, click <a href="/about">Here</a>
   </p>
 
 # widget behavior
 archive_type: 'monthly'
+show_count: true
 
 # Miscellaneous
-google_analytics: UA-122713769-1
+google_analytics: # UA-122713769-1
 favicon: images/icon.png
 twitter_id:
 google_plus: 112373242775367333102
@@ -64,8 +62,8 @@ canvas_nest: false
 gitment:
   owner: liuqidev
   repo: liuqidev.github.io
-  client_id: 9db4a7f39961fa7531cc
-  client_secret: bd23ffc25530e831d3dc6efc731bb9de4d8c6fd0
+  client_id: 5e40c2a3bf3076fce203
+  client_secret: 58df99a3d1b4f78555bfa8ebddfefbce4b0524d8
   local_id: 60bcecf77b594c435fc5
   local_secret: b492c879473fdb14ca091697ffb0f03fab646c7f
   coding_owner: liuqidev
@@ -99,10 +97,26 @@ dao_voice: false
 eyes_protected: false
 
 # dynamic_title
-# title_change: false
-title_change:
-  normal: o(∩_∩)o Welcome!
-  leave: Opps...●﹏●
+title_change: false
+# title_change:
+  # normal: o(∩_∩)o Welcome!
+  # leave: Opoos...●﹏●
 
+mathjax: true
 
-theme: jekyll-theme-cayman
+# http://howiefh.github.io/2016/04/29/hexo-s-calendar-plugin/?utm_source=tuicool
+calendar:
+  language: en 
+  options:
+    months: ['January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December']
+    dayOfWeekShort: ['S', 'M', 'T', 'W', 'T', 'F', 'S']
+    dayOfWeek: ['Sunday', 'Monday', 'Tuesday', 'Wednesday', 'Thursday', 'Friday', 'Saturday']
+    postsMonthTip: 'Posts published in LMM yyyy'
+    titleFormat: 'yyyy LMM'
+    titleLinkFormat: '/archives/yyyy/MM/'
+    headArrows: {previous: '<span class="cal-prev"></span>', next: '<span class="cal-next"></span>'}
+    footArrows: {previous: ' ', next: ' '}
+    weekOffset: 0
+    single: false
+    root: '/calendar/'
+    url: '/calendar.json'

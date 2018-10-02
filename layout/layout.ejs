@@ -1,13 +1,9 @@
 <%- partial('_partial/head') %>
 <body>
-	<div class="bg bg-blur"></div>
-	<%- partial('_partial/masthead') %>
+
 	<%- body %>
 
-	<%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
 	<%- partial('_partial/inline-scripts') %>
-	<%- partial('_partial/after-footer') %>
-	<%- partial('_partial/back-to-top') %>
 
 </body>
 </html>

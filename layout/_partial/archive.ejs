@@ -1,3 +1,11 @@
+<%if (pagination == 2){%>
+<div class="bg bg-blur" style="background:url('/images/bg/bg-4.jpg');background-position:center"></div>
+<%} else {%>
+<div class="bg bg-blur"></div>
+<% }%>
+
+<%- partial('_partial/masthead') %>
+
 <div class="container">
 <%if (index){%>
 <%- partial('_partial/header', null, {cache: !config.relative_link}) %>
@@ -53,3 +61,7 @@
 	
 	
 </div>
+<%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
+
+<%- partial('_partial/plugins/search-in-site') %>
+

@@ -1,0 +1,28 @@
+<div class="about-wrapper">
+<div class="bg bg-blur" style="background:url('/images/bg/bg-3.jpg');background-position:center"></div>
+<%- partial('_partial/masthead') %>
+<div class="about-content">
+
+<div class="container">
+<%- post.content %>
+<hr>
+  <a href="#">
+  <img  id="avatar-logo" width=100%  alt="WizardLQ" src="http://www.gravatar.com/avatar/d14c7c7faf5e1f3001c070f3141d698f?s=512">
+  </a>
+  <p>Hi,我是一名魔法师，目前自动化硕士在读.<em><strong>“科技是普通人眼中的魔法”</strong></em>.之前有在<a href="https://blog.csdn.net/icurious">CSDN</a>、博客园、简书等写过博客.
+  写博客一方面能够帮助自己查缺补漏，总结和反思，同时还能被他人看到和甚至对他人产生帮助，十分有意义.若有读者在阅读中发现问题或者有什么意见或者建议，欢迎联系我的邮箱，
+  或者在博客或者博文中留言，我会尽量回复.<em>(由于平时比较忙<s>我比较懒</s>，有些文章可能需要很长时间才能完善.)</em><br/><strong>你通过下列方式联系到我：</strong></br>
+  <i class="iconfont">&#xe66e;</i><em>Email: <a>nihaoworld@outlook.com</a></em>|
+  <i class="iconfont">&#xe64f;</i><a target="_blank" href="https://blog.csdn.net/icurious">CSDN</a>|
+  <i class="iconfont">&#xe655;</i><a target="_blank" href="https://weibo.com/liuqidev/">Weibo</a>|
+  <i class="iconfont">&#xe6e1;</i><a target="_blank" href="https://space.bilibili.com/20204877/#/">BiliBili</a>
+  </p>
+  
+	
+<hr>	
+<%- partial('_partial/plugins/mini-map')%>
+<hr>
+ </div>
+</div>
+</div>
+<%- partial('_partial/footer', null, {cache: !config.relative_link}) %>

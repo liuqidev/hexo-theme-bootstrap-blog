@@ -65,7 +65,7 @@
       var alt = this.alt;
       if (alt) $(this).after('<span class="caption">' + alt + '</span>');
 
-      $(this).wrap('<a href="' + this.src + '" title="' + alt + '" class="image-link"></a>');
+      $(this).wrap('<div href="' + this.src + '" title="' + alt + '" class="image-link"></div>');
     });
 
     $(this).find('.image-link').each(function(){

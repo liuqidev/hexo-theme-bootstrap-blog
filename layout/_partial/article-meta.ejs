@@ -1,0 +1,28 @@
+<% if (index){%>
+	<div class="article-meta"> 
+		<% if (post.top) {%>
+			<%- partial("_partial/pin-top")%>
+		<% } %>
+		
+
+		  <%- partial('post/date', {class_name: 'article-date', date_format: null}) %>
+			<% if (post.author){ %>
+			<div class="article-author"><%= post.author %></div>
+		  <% } %>
+
+		  <% if(theme.wordcount){%>
+		   <%- partial("_partial/wordcount")%>
+		  <% } %>
+		  <%- partial('post/category') %>	
+		  </div>
+<% } else {%> 
+	<% if (post.author){ %>
+		<%= post.author %>
+	<% } %>
+	</hr>
+	<div class="article-datetime">
+	  <time datetime="<%= date_xml(post.date) %>" itemprop="datePublished"><%= date(post.date, null) %></time>
+	</div>
+	<div class="header-divider"></div>	
+<% } %>
+	   

@@ -47,7 +47,7 @@ pre{
 .highlight pre {
   margin: 0;
   background-color: #1C1E1F;
-  color: #ffffffa8;
+  color: #ffffffcc;
   font-size:16px;
   border: none 1px #ccc;
 }
@@ -106,7 +106,9 @@ pre{
   color: #0070ff;
 }
 
-.highlight .tag,
+.highlight .tag{
+	color:#046cfa;
+}
 .highlight .regexp {
   color: #333333;
 }
@@ -148,3 +150,5 @@ pre{
 .highlight .gutter pre .line{
 	color:#808080;
 }
+
+

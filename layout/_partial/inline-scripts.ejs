@@ -1,29 +1,42 @@
-<% if (config.disqus_shortname){ %>
-<script>
-  var disqus_shortname = '<%= config.disqus_shortname %>';
-  <% if (page.permalink){ %>
-  var disqus_url = '<%= page.permalink %>';
-  <% } %>
-  (function(){
-    var dsq = document.createElement('script');
-    dsq.type = 'text/javascript';
-    dsq.async = true;
-    dsq.src = '//' + disqus_shortname + '.disqus.com/<% if (page.comments) { %>embed.js<% } else { %>count.js<% } %>';
-    (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
-  })();
-</script>
+<% if (theme.dao_voice){ %>
+<%- partial('plugins/dao-voice') %>
 <% } %>
 
-<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js" integrity="sha384-8gBf6Y4YYq7Jx97PIqmTwLPin4hxIzQw5aDmUg/DDhul9fFpbbLcLh3nTIIDJKhx" crossorigin="anonymous"></script>
+<% if (theme.baidu_tongji){ %>
+<%- partial('plugins/baidu-tongji') %>
+<% } %>
 
-<script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.6/js/bootstrap.min.js" integrity="sha384-0mSbJDEHialfmuBBQP6A4Qrprq5OVfW37PRR3j5ELqxss1yVqOtnepnHVP9aJ7xS" crossorigin="anonymous"></script>
 
+<% if (theme.eyes_protected){ %>
+<%- partial('plugins/eyes-protected') %>
+<% } %>
+
+<% if (theme.canvas_nest){%>
+	<script type="text/javascript" src="//cdn.bootcss.com/canvas-nest.js/1.0.0/canvas-nest.min.js"></script>
+<% } %>
+
+<% if (theme.title_change) { %>
+	<%- partial('plugins/dynamic-title') %>
+<% } %>
+
+<!--
+<script src="https://cdn.bootcss.com/jquery/2.1.4/jquery.min.js"></script>
+-->
+<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
 <% if (theme.fancybox){ %>
   <%- css('fancybox/jquery.fancybox') %>
   <%- js('fancybox/jquery.fancybox.pack') %>
 <% } %>
-
 <%- js('js/script') %>
 
+<%- partial('plugins/back-to-top') %>
 
-
+<% if (theme.widgets.indexOf('calendar') != -1){ %>
+  <%- js('js/languages') %>
+  <%- js('js/calendar') %>
+  <script type="text/javascript">
+  $(function() {
+    $('#calendar').aCalendar('<%= theme.calendar.language || config.language %>', $.extend(<%- JSON.stringify(theme.calendar.options ) %>, {single:<%= config.calendar.single %>, root:'<%= config.calendar.root %>'}));
+  });
+  </script>
+<% } %>
