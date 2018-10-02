@@ -4,9 +4,11 @@ menu:
   Home: index.html
   Archives: archives/
   Categories: categories/
-  # Projects: projects/
-  About: about/
+  # Projects: projects/ 
+  Moments: moments/
   Comments: comments/
+  Links: links/
+  About: about/
  
 rss: /atom.xml
 
@@ -26,7 +28,6 @@ widgets:
 # - translate
 - category
 - archive
-
 - search
 
 #- tag

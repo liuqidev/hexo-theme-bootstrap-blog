@@ -12,7 +12,7 @@
 <%- partial('post/title', {class_name: 'article-title'}) %>
 	<% if (!index&&post.password) {%>
 	<%- partial("post/seal", {pass:post.password})%>
-<% } %>
+	<% } %>
 
 <%- partial("_partial/article-meta")%>
 

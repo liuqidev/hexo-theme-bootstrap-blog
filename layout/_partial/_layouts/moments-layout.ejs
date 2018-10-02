@@ -1,0 +1,13 @@
+<div class="bg bg-blur" style="background:url('/images/bg/bg-7.jpg');background-position:center"></div>
+<%- partial('_partial/masthead') %>
+<% if (!index&&post.password) {%>
+<%- partial("_partial/post/seal", {pass:post.password})%>
+<% } %>
+
+<div class="container">
+<div class="blog-header">
+<h1 class="blog-title"><%- post.title %></h1>
+</div>
+<%- post.content %>
+</div>
+<%- partial('_partial/footer', null, {cache: !config.relative_link}) %>

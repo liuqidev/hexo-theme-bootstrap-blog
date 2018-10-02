@@ -233,9 +233,6 @@ Usage:
 ```
 ![img caption](img url)
 
-~or~
-
-{% fancybox img_url [img_thumbnail] [img_caption] %}
 ```
 
 ### Callouts

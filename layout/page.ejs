@@ -6,4 +6,13 @@
 <% } else if (page.layout==='about'){ %>
 	
 	<%- partial('_partial/_layouts/about-layout', {post: page, index: false}) %>
+<% } else if (page.layout==='moments'){%>
+
+	<%- partial('_partial/_layouts/moments-layout', {post: page, index: false}) %>
+
+<% } else {%>
+
+	<%- partial('_partial/_layouts/no-layout', {post: page, index: false}) %>
+	<%- partial('_partial/footer', null, {cache: !config.relative_link}) %>
 <% } %>
+
