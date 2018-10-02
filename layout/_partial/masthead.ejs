@@ -18,8 +18,26 @@
     <div class="collapse navbar-collapse" id="main-menu-navbar">
       <ul class="nav navbar-nav">
         <% for (var i in theme.menu){ %>
-          <li><a class="<%= is_current(theme.menu[i]) ? 'active' : '' %>"
+			<% if (i === 'Categories'){%>
+			
+	<li class="dropdown">
+	  <a id="dropdownMenu1" type="button"  data-toggle="dropdown" aria-haspopup="true" aria-expanded="true">
+		Categories
+		<span class="caret"></span>
+	  </a>
+	  <ul class="dropdown-menu" aria-labelledby="dropdownMenu1">
+		<li><a style="display:block;width:200px;" href="/categories">All</a></li>
+		<li></hr></li>
+		<li><%- list_categories({show_count: theme.show_count, class: 'sidebar-module'}) %></li>
+	  </ul>
+
+	</li>
+				
+			<% } else {%>
+			
+				<li><a class="<%= is_current(theme.menu[i]) ? 'active' : '' %>"
                  href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
+			<% } %>
         <% } %>
 
       </ul>
