@@ -123,3 +123,4 @@ calendar:
     url: '/calendar.json'
 
 theme: jekyll-theme-architect
+show_downloads: true
