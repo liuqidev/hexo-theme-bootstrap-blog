@@ -122,5 +122,9 @@ calendar:
     root: '/calendar/'
     url: '/calendar.json'
 
+<<<<<<< HEAD
 theme: jekyll-theme-architect
 show_downloads: true
+=======
+theme: jekyll-theme-cayman
+>>>>>>> f6f86ee060c67332aa53b3554a76d4bea5d93c70
