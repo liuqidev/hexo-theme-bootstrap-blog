@@ -35,14 +35,21 @@
 				
 			<% } else {%>
 			
-				<li><a class="<%= is_current(theme.menu[i]) ? 'active' : '' %>"
+				<li><a target="_blank" class="<%= is_current(theme.menu[i]) ? 'active' : '' %>"
                  href="<%- url_for(theme.menu[i]) %>"><%= i %></a></li>
 			<% } %>
         <% } %>
+		
 
       </ul>
 		
+		 <ul class="nav navbar-nav navbar-right">
+		<li><a href="https://github.com/liuqidev/hexo-theme-bootstrap-blog" title="Fork the theme on github" target="_blank"><i class="iconfont">&#xe7ab;</i></a></li>
 
+		<% if (theme.rss){ %>
+		  <li><a href="<%- theme.rss %>" title="RSS Feed" target="_blank"><i class="fa fa-rss" ></i></a></li>
+		<% } %>
+		</ul>
 
     </div><!-- /.navbar-collapse -->
   </div><!-- /.container-fluid -->
