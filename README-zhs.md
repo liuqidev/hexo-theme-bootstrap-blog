@@ -8,29 +8,37 @@
 
 ## 安装
 
-### Install
+0) 学习hexo，搭建自己的hexo站点,[文档](https://hexo.io/zh-cn/docs/)
 
-**This theme requires Hexo 2.4 and above.**
 
-1) Install theme:
+1) 安装主题:
 
 ```bash
 $ git clone https://github.com/liuqidev/hexo-theme-bootstrap-blog.git themes/bootstrap-blog
 ```
 
-2) (optional) Install [hexo-tag-bootstrap](https://github.com/wzpan/hexo-tag-bootstrap) for more Bootstrap tags (textcolors, buttons, labels, badges, etc.):
+1.1) 安装相关依赖**（重要）**
+
+进到自己的博客根目录，执行命令
+```
+npm install
+```
+注意给出的提示，例如某些库的版本过时，按照提示进行操作。
+
+
+2) (可选) Install [hexo-tag-bootstrap](https://github.com/wzpan/hexo-tag-bootstrap) for more Bootstrap tags (textcolors, buttons, labels, badges, etc.):
 
 ```bash
 $ npm install hexo-tag-bootstrap --save
 ```
 
-3) (optional) Install [hexo-tag-fontawesome](https://github.com/akarzim/hexo-tag-fontawesome) for placing Font Awesome icons in your Markdown:
+3) (可选) Install [hexo-tag-fontawesome](https://github.com/akarzim/hexo-tag-fontawesome) for placing Font Awesome icons in your Markdown:
 
 ```bash
 $ npm install hexo-tag-fontawesome --save
 ```
 
-4. (option) Math support：
+4. (可选) 使用LaTeX：
 
 Go to your hexo blog root, cd to `node_modules\kramed\lib\rules\inline.js `, edit line11:
 
@@ -38,14 +46,13 @@ Go to your hexo blog root, cd to `node_modules\kramed\lib\rules\inline.js `, edi
 //  escape: /^\\([\\`*{}\[\]()#$+\-.!_>])/,
   escape: /^\\([`*\[\]()#$+\-.!_>])/
 ```
-
-and then, edit line 20/21:
+编辑第 20/21行:
 
 ```bash
 //  em: /^\b_((?:__|[\s\S])+?)_\b|^\*((?:\*\*|[\s\S])+?)\*(?!\*)/,
   em: /^\*((?:\*\*|[\s\S])+?)\*(?!\*)/
 ```
-finally, add below into hexo 
+
 
 ```
 # MathJax Support
@@ -55,18 +62,18 @@ mathjax:
 
 
 
-### Enable
+### 生效
 
 Modify the `theme` setting in `_config.yml` to `bootstrap-blog`.
 
-### Update
+### 更新
 
 ```bash
 cd themes/bootstrap-blog
 git pull
 ```
 
-## 配置
+## 可选配置
 
 ```yml
 # File: themes/bootstrap-blog/_config.yml
@@ -211,6 +218,7 @@ theme_config:
   - dao_voice: http://www.daovoice.io
 - dynamic_title
 
+
 ## 原来特性
 
 ### Front-Matter Extras
@@ -282,7 +290,7 @@ The [default Landscape Hexo theme](https://github.com/hexojs/hexo-theme-landscap
 
 The Landscape Stylus styles have been replaced with standard CSS files which override `bootstrap.min.css`. Stylus is used only for [bundling the CSS files](./source/css/styles.styl). Feel free to convert the CSS to your pre-processor of choice (Stylus, LESS, Sass, etc.).
 
-## License
+## 证书
 
 [MIT License](http://cgm.mit-license.org/)
 
